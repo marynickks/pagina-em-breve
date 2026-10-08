@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================
+   FUNDO
+========================= */
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("imagens.proj1/fundo.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    position: absolute;
+
+    top: 35px;
+    left: 8%;
+
+    width: 120px;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   FOGUETE
+========================= */
+
+.foguete {
+    position: absolute;
+
+    width: 150px;
+
+    right: 12%;
+
+    bottom: -200px;
+
+    z-index: 5;
+
+    animation: foguete 2s linear infinite;
+}
+
+
+/* =========================
+   ANIMAÇÃO DO FOGUETE
+========================= */
+
+@keyframes foguete {
+
+    0% {
+        bottom: -200px;
+    }
+
+    100% {
+        bottom: 100%;
+    }
+
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    position: absolute;
+
+    left: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   TEXTO PEQUENO
+========================= */
+
+.subtitulo {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+h1 span {
+    color: #f34b4b;
+}
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.contador {
+    display: flex;
+
+    gap: 35px;
+
+    margin-bottom: 30px;
+}
+
+.tempo {
+    text-align: left;
+}
+
+.contador span {
+    display: block;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.contador p {
+    font-size: 15px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.botao {
+    width: 147px;
+    height: 48px;
+
+    background: transparent;
+
+    border: 2px solid white;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* TRIÂNGULO DO BOTÃO */
+
+.botao img {
+    width: 15px;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.botao:hover {
+    background: white;
+
+    color: #5421a5;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .logo {
+        left: 6%;
+        top: 25px;
+
+        width: 100px;
+    }
+
+
+    .foguete {
+        width: 100px;
+
+        right: 8%;
+
+        bottom: -150px;
+    }
+
+
+    .conteudo {
+        left: 6%;
+
+        top: 50%;
+    }
+
+
+    .subtitulo {
+        font-size: 13px;
+    }
+
+
+    h1 {
+        font-size: 35px;
+
+        max-width: 350px;
+    }
+
+
+    .contador {
+        gap: 18px;
+    }
+
+
+    .contador span {
+        font-size: 35px;
+    }
+
+
+    .contador p {
+        font-size: 12px;
+    }
+
+}
